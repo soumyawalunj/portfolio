@@ -107,16 +107,15 @@ window.addEventListener("scroll", () => {
 
     let current = "";
 
+    const scrollPosition = window.scrollY + 150;
+
     sections.forEach(section => {
 
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.clientHeight;
-
         if (
-            window.scrollY >= sectionTop &&
-            window.scrollY < sectionTop + sectionHeight
+            scrollPosition >= section.offsetTop &&
+            scrollPosition < section.offsetTop + section.offsetHeight
         ) {
-            current = section.getAttribute("id");
+            current = section.id;
         }
 
     });
@@ -126,9 +125,7 @@ window.addEventListener("scroll", () => {
         link.classList.remove("active");
 
         if (link.getAttribute("href") === "#" + current) {
-
             link.classList.add("active");
-
         }
 
     });
