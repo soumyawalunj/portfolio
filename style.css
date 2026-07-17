@@ -212,7 +212,14 @@ box-shadow:0 0 60px rgba(9, 113, 204, 0.8);
 @media(max-width:900px){
 
 header{
-    flex-direction:column;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 20px;
+}
+
+.logo{
+    font-size:32px;
 }
 
 nav{
