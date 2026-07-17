@@ -1133,12 +1133,11 @@ color:white;
 @media(max-width:768px){
 
 .menu-btn{
-    display: none;
+    display: block;
     font-size: 30px;
-    color: #64FFDA;
+    color: red;
     cursor: pointer;
-    position: relative;
-    z-index: 10001;
+    border: 2px solid yellow;
 }
 
 nav{
