@@ -27,9 +27,9 @@ header{
     padding:20px 8%;
     display:flex;
     justify-content:space-between;
-    align-items:center;
+    align-items: center;
     background:#051129;
-    z-index:9999;
+    z-index:10000;
 }
 .menu-btn{
 
@@ -1133,9 +1133,12 @@ color:white;
 @media(max-width:768px){
 
 .menu-btn{
-
-display:block;
-
+    display: none;
+    font-size: 30px;
+    color: #64FFDA;
+    cursor: pointer;
+    position: relative;
+    z-index: 10001;
 }
 
 nav{
@@ -1175,6 +1178,7 @@ margin:15px 0;
 }
 
 }
+.hero,
 .page,
 .skills-page,
 .projects,
