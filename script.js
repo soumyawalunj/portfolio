@@ -64,3 +64,21 @@ function typeEffect(){
 }
 
 typeEffect();
+const menuBtn=document.querySelector(".menu-btn");
+
+const nav=document.querySelector("nav");
+
+menuBtn.onclick=()=>{
+
+nav.classList.toggle("active");
+
+};
+document.querySelectorAll("nav a").forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+nav.classList.remove("active");
+
+});
+
+});
