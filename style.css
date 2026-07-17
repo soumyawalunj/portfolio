@@ -14,7 +14,9 @@ body{
     background:#081b29;
     color:#fff;
 }
-
+section{
+    scroll-margin-top: 100px;
+}
 /* Header */
 
 header{
