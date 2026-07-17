@@ -22,14 +22,14 @@ section{
 header{
     position:fixed;
     top:0;
-    left: 0;
+    left:0;
     width:100%;
     padding:20px 8%;
     display:flex;
     justify-content:space-between;
-    align-items: center;
+    align-items:center;
     background:#051129;
-    z-index:1000;
+    z-index:99999;
 }
 .menu-btn{
 
@@ -184,6 +184,8 @@ letter-spacing:2px;
     width:40%;
     display:flex;
     justify-content:center;
+    position:relative;
+    z-index:1;
 }
 
 .hero-image img{
@@ -201,6 +203,9 @@ object-fit:cover;
 box-shadow:0 0 35px rgba(128, 100, 255, 0.5);
 
 transition:.5s;
+
+position: relative;
+z-index: 1;
 
 }
 
