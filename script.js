@@ -129,5 +129,41 @@ window.addEventListener("scroll", () => {
         }
 
     });
+const form = document.getElementById("contactForm");
 
+form.addEventListener("submit", async (e) => {
+
+    e.preventDefault();
+
+    const formData = {
+        name: form.name.value,
+        email: form.email.value,
+        company: form.company.value,
+        subject: form.subject.value,
+        message: form.message.value
+    };
+
+    try {
+
+        const response = await fetch("https://script.google.com/macros/s/AKfycbxBA5Sx57ITXSr29Dkz3dDOdyGzHxYuSl-ApgYpW-5vfUSePjEW3I9jAdjIaCEAUOrx/exec", {
+            method: "POST",
+            headers: {
+                "Content-Type": "text/plain;charset=utf-8"
+            },
+            body: JSON.stringify(formData)
+        });
+
+        if (response.ok) {
+            alert("✅ Thank you! Your message has been sent successfully.");
+            form.reset();
+        } else {
+            alert("❌ Something went wrong. Please try again.");
+        }
+
+    } catch (error) {
+        alert("❌ Error sending message.");
+        console.error(error);
+    }
+
+});
 });
