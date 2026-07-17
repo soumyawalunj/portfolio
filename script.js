@@ -129,6 +129,8 @@ window.addEventListener("scroll", () => {
         }
 
     });
+
+});
 const form = document.getElementById("contactForm");
 
 form.addEventListener("submit", async (e) => {
@@ -153,17 +155,19 @@ form.addEventListener("submit", async (e) => {
             body: JSON.stringify(formData)
         });
 
-        if (response.ok) {
-            alert("✅ Thank you! Your message has been sent successfully.");
-            form.reset();
-        } else {
-            alert("❌ Something went wrong. Please try again.");
-        }
+       const result = await response.json();
+
+if(result.result === "success"){
+    alert("✅ Message Sent Successfully!");
+    form.reset();
+}
+else{
+    alert("Something went wrong.");
+}
 
     } catch (error) {
         alert("❌ Error sending message.");
         console.error(error);
     }
 
-});
 });
