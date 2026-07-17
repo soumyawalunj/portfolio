@@ -13,9 +13,13 @@ html{
 body{
     background:#081b29;
     color:#fff;
+    overflow-x:hidden;
 }
 section{
     scroll-margin-top: 100px;
+}
+html, body{
+    overflow-x: hidden;
 }
 /* Header */
 
@@ -23,13 +27,14 @@ header{
     position:fixed;
     top:0;
     left:0;
+    right: 0;
     width:100%;
     padding:20px 8%;
     display:flex;
     justify-content:space-between;
     align-items:center;
     background:#051129;
-    z-index:99999;
+    z-index:1000;
 }
 .menu-btn{
 
