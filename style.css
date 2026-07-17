@@ -513,13 +513,9 @@ font-size:18px;
 }
 
 .project-container{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-
-gap:35px;
-
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
 }
 
 .project-card{
@@ -1143,11 +1139,11 @@ color:white;
 @media(max-width:768px){
 
 .menu-btn{
-    display: block;
-    font-size: 30px;
-    color: red;
-    cursor: pointer;
-    border: 2px solid yellow;
+    display:block;
+    font-size:30px;
+    color:#64FFDA;
+    cursor:pointer;
+    border:none;
 }
 
 nav{
@@ -1196,4 +1192,30 @@ margin:15px 0;
 .contact{
     position: relative;
     z-index: 1;
+}
+@media (max-width:768px){
+
+    *{
+        max-width:100%;
+    }
+
+    .hero,
+    .page,
+    .skills-page,
+    .projects,
+    .achievements,
+    .experience,
+    .contact{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .project-card{
+        width:100%;
+    }
+
+    .achievement-card{
+        width:100%;
+    }
+
 }
